@@ -3,3 +3,8 @@ Test/bin/*
 Test.Tests/obj/*
 Test.Tests/bin/*
 
+Math/obj/*
+Math/bin/*
+Math.Tests/obj/*
+Math.Tests/bin/*
+
