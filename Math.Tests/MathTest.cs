@@ -69,7 +69,54 @@ namespace Math.Tests
 
             // assert:
             Should.Throw<ITS_OVER_9000_Exception>(act);
+        }
 
+        [Theory]
+        [InlineData(9000, 5)]
+        public void result_must_be_correct__when__subtraction_earlier_value_with_new_value(int substracingValue, int initialValue)
+        {
+            //arrange:
+            var math = new Math(initialValue);
+
+            // act:
+            math.Sub(substracingValue);
+
+            // assert:
+            math.Value.ShouldBe(initialValue - substracingValue);
+
+        }
+
+        [Fact]
+        public void result_must_be_correct_when_substraction_new_value_after_adding_same_value()
+        {
+            //arrange:
+            var initialValue = 783;
+
+            var math = new Math(initialValue);
+            var newValue = 87;
+
+            // act:
+            math.Add(newValue).Sub(newValue);
+
+            // assert:
+            math.Value.ShouldBe(initialValue);
+        }
+
+        [Fact]
+        public void result_must_be_correct_when_adding_new_value_after_substracting_same_value()
+        {
+            //arrange:
+            var initialValue = 783;
+
+            var math = new Math(initialValue);
+            var newValue = 87;
+
+            // act:
+            math.Sub(newValue).Add(newValue);
+
+            // assert:
+            math.Value.ShouldBe(initialValue);
         }        
+
     }
 }
