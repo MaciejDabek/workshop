@@ -10,6 +10,7 @@ namespace Test.Tests
         [InlineData("test1")]
         [InlineData("test2")]
         [InlineData("test3")]
+        [InlineData("test4")]
         public void change_text_upper_case(string value)
         {
             //arrange
