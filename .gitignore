@@ -1,0 +1,5 @@
+Test/obj/*
+Test/bin/*
+Test.Tests/obj/*
+Test.Tests/bin/*
+
