@@ -118,5 +118,20 @@ namespace Math.Tests
             math.Value.ShouldBe(initialValue);
         }        
 
+        [Fact]
+        public void value_must_be_correct__when__multiplication_earlier_value_with_new()
+        {
+            //arrange:
+            var initValue = 222;
+            var math = new Math(initValue);
+            
+            //act:
+            math.Multiply(3);
+
+            //assert:
+
+            math.Value.ShouldBe(initValue * 3);
+        }
+
     }
 }

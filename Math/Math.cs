@@ -30,6 +30,12 @@ namespace Math
             Value -= substracingValue;
             return this;
         }
+
+        public Math Multiply(int v)
+        {
+            Value *= v;
+            return this;
+        }
     }
 
     public class ITS_OVER_9000_Exception : Exception
